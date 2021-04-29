@@ -30,39 +30,35 @@ Constraints:
 command consists of "G", "()", and/or "(al)" in some order.
 """
 
-import time
 
+# Method 1
+# def interpret(command):
+#     parser_dict = {'G': 'G', '()': 'o', '(al)': 'al'}
+#     chars = parser_dict.keys()
+#     print(chars)
+#     output = ""
+#     # print(command[0:1])
+#
+#     starting_index = 0
+#     ending_index = 1
+#     # print(f'len(command) = {len(command)}')
+#     while starting_index != len(command):
+#         while command[starting_index:ending_index] not in parser_dict.keys():
+#             # print(f'command[{starting_index}: {ending_index}] = {command[starting_index: ending_index]}')
+#             ending_index += 1
+#         # print(f'command[{starting_index}: {ending_index}] = {command[starting_index: ending_index]}')
+#         output += parser_dict[command[starting_index: ending_index]]
+#         print(f'{output}\n')
+#         starting_index = ending_index
+#
 
+# Method 2
 def interpret(command):
-    parser_dict = {'G': 'G', '()': 'o', '(al)': 'al'}
-    chars = parser_dict.keys()
-    print(chars)
-    output = ""
-    # print(command[0:1])
-
-    starting_index = 0
-    ending_index = 1
-    # print(f'len(command) = {len(command)}')
-    while starting_index != len(command):
-        while command[starting_index:ending_index] not in parser_dict.keys():
-            # print(f'command[{starting_index}: {ending_index}] = {command[starting_index: ending_index]}')
-            ending_index += 1
-            time.sleep(1)
-        # print(f'command[{starting_index}: {ending_index}] = {command[starting_index: ending_index]}')
-        output += parser_dict[command[starting_index: ending_index]]
-        print(f'{output}\n')
-        starting_index = ending_index
-
-    # for char in chars:
-    #     if char in command:
-    #         print(command.index(char))
-    # command.index(char) = parser_dict[char]
-    # command[command.index(char)] = parser_dict[char]
-    return output
+    return command.replace("()", "o").replace("(al)", "al")
 
 
 if __name__ == '__main__':
-    # command = "G()(al)"
-    # print(interpret(command))
-    command = "G"
+    command = "G()(al)"
     print(interpret(command))
+    # command = "G"
+    # print(interpret(command))
