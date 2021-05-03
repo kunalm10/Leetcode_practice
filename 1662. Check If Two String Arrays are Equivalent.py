@@ -53,10 +53,10 @@ def arrayStringsAreEqual(word1, word2):
 if __name__ == '__main__':
     word1 = ["ab", "c"]
     word2 = ["a", "bc"]
-    print(arrayStringsAreEqual(word1,word2))
+    print(arrayStringsAreEqual(word1, word2))
     word1 = ["a", "cb"]
     word2 = ["ab", "c"]
-    print(arrayStringsAreEqual(word1,word2))
-    word1  = ["abc", "d", "defg"]
+    print(arrayStringsAreEqual(word1, word2))
+    word1 = ["abc", "d", "defg"]
     word2 = ["abcddefg"]
-    print(arrayStringsAreEqual(word1,word2))
+    print(arrayStringsAreEqual(word1, word2))
