@@ -34,19 +34,13 @@ images[i][j] is either 0 or 1.
 """
 
 def flipAndInvertImage(image):
-    # i = [1 for _ in range(len(image))]
-    # print(i)
-    # i = [1,1,1]
-    inverted = list()
+
     flipped_image = list()
     for pixel in image:
         flipped = pixel[::-1]
-        # print(flipped)
-
         bgr = [1 - i for i in flipped]
-        # print(bgr)
         flipped_image.append(bgr)
-    # flipped_image.append(inverted)
+
     return flipped_image
 
 
