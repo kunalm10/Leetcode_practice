@@ -29,3 +29,10 @@ def take_num(a,b):
 a = 1
 b = 2
 take_num(a,b)
+
+
+a = [1, 2, 3, 4, 5]
+b = a[:]
+b[0] = 23
+print(b)
+print(a)
