@@ -52,6 +52,8 @@ board[i][j] is a digit or '.'.
 
 # Method 1
 def isValidSudoku(board):
+
+    # check valid rows
     for i in range(9):
         print(board[i])
         discovered_numbers_row = []
@@ -60,6 +62,8 @@ def isValidSudoku(board):
                 return False
             else:
                 discovered_numbers_row.append(num)
+
+    # check valid cols
     for i in range(9):
         discovered_numbers_col = []
         for j in range(9):
@@ -68,6 +72,8 @@ def isValidSudoku(board):
                 return False
             else:
                 discovered_numbers_col.append(num)
+
+    # check valid boxes
     for k in range(3):
         for l in range(3):
             discovered_numbers_box = []
